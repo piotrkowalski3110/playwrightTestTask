@@ -10,6 +10,7 @@ test('Login to website', async ({ page }) => {
   await page.getByRole('textbox', { name: 'username' }).fill(tester8.email);
   await page.getByRole('textbox', { name: 'password' }).fill(tester8.password);
   await page.getByRole('button', { name: 'Log in' }).click();
+  await page.waitForTimeout(3000);
   expect(page.url()).toMatch('https://testing.muras.eu/my/');
 
   // save cookies to file
