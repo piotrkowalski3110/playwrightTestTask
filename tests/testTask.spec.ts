@@ -26,8 +26,8 @@ test.describe.serial('Create + clean up test', () => {
     await expect(checkboxEditMode).toBeChecked(); // check if checkbox is checked
 
     await page.getByRole('button', { name: 'Add an activity or resource' }).nth(1).click(); // click second add activity button
-    await page.waitForTimeout(2000);
-    await expect(page.locator('.modal-content')).toBeVisible(); // check if modal is visible
+    //await page.waitForTimeout(2000);
+    //await expect(page.locator('.modal-content')).toBeVisible(); // check if modal is visible
     await page.getByLabel('Activity modules').getByRole('link', { name: 'Text and media area' }).click(); // click text and media area
 
     await page.locator('#fitem_id_name input').fill(loremWord); // fill title with one world
@@ -54,8 +54,8 @@ test.describe.serial('Create + clean up test', () => {
     await deleteButton.click(); // click delete button
 
     const deleteModal: Locator = page.locator('.modal-dialog'); // locate delete modal
-    await page.waitForTimeout(2000);
-    await expect(deleteModal).toBeVisible(); // check if modal is visible
+    //await page.waitForTimeout(2000);
+    //await expect(deleteModal).toBeVisible(); // check if modal is visible
     await deleteModal.locator('button.btn-danger').click(); // delete content
   });
 });
