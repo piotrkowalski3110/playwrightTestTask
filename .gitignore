@@ -11,3 +11,6 @@ node_modules/
 # IDE
 .idea/
 .vscode/
+
+# Credentials
+lib/utils/credentials.ts
